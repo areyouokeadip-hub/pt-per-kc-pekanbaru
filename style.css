@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -1131,4 +1132,15 @@ footer {
   #page-kontak * {
     max-width: 100%;
   }
+}
+
+#page-tentang .about-photo,
+#page-tentang .about-emblem {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+#page-tentang .about-photo:hover,
+#page-tentang .about-emblem:hover {
+  transform: none !important;
 }
