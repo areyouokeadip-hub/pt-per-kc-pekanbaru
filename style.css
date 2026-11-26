@@ -12,13 +12,18 @@
   --line: #dceaf3;
 }
 
-html,
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   background: #f1f8fd;
   color: var(--ink);
   font-family: "DM Sans", sans-serif;
-  overflow-x: clip;
+  overflow-x: hidden;
+  overflow-y: auto;
   max-width: 100%;
 }
 
@@ -202,8 +207,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 800px;
-  min-height: 800px;
+  min-height: 520px;
   border-radius: 18px;
   background: #1a4f78;
   color: white;
@@ -610,8 +614,8 @@ body {
 
 /* EMBLEM TENTANG KAMI */
 .about-emblem {
-  height: 180px !important;
-  width: 180px !important;
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
   background: #2879b9;
   border: 5px double #d8efff;
@@ -722,7 +726,7 @@ body {
   background: #174b78;
 }
 
-/* SIMULASI KREDIT */
+/* SIMULASI PEMBIAYAAN/KREDIT */
 .calculator-layout {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -911,8 +915,7 @@ footer {
   }
 
   #page-beranda .hero {
-    height: 700px;
-    min-height: 700px;
+    min-height: 460px;
   }
 
   .quick-grid,
@@ -1035,17 +1038,17 @@ footer {
   }
 
   .about-emblem {
-    height: 140px !important;
-    width: 140px !important;
+    height: 140px;
+    width: 140px;
     margin: 0 auto;
   }
 
   .feature-photo,
   .about-photo,
   .contact-photo {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
+    height: auto;
+    min-height: 0;
+    max-height: none;
   }
 
   .info-strip {
@@ -1087,20 +1090,19 @@ footer {
     color: #4b9bd1;
   }
 
-  /* Banner pengajuan: tinggi mengikuti gambar penuh tanpa ruang kosong */
   #page-pengajuan .contact-photo {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
+    height: auto;
+    min-height: 0;
+    max-height: none;
     margin-bottom: 16px;
   }
 
   #page-pengajuan .contact-photo img {
     display: block;
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    object-fit: cover !important;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
   }
 
   #page-pengajuan .contact-photo span {
@@ -1110,7 +1112,6 @@ footer {
     padding: 8px 12px;
   }
 
-  /* Persyaratan umum & khusus di mobile */
   #page-pengajuan .requirements-grid {
     gap: 14px;
     margin-top: 16px;
@@ -1131,20 +1132,19 @@ footer {
     line-height: 1.6;
   }
 
-  /* Kartu telepon, email, dan kantor pelayanan dibuat ringkas */
   #page-pengajuan .contact-card {
     display: grid;
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
     gap: 12px;
-    margin-top: 16px !important;
+    margin-top: 16px;
     margin-bottom: 16px;
   }
 
   #page-pengajuan .contact-card > div {
     width: 100%;
-    min-height: 0 !important;
-    height: auto !important;
-    padding: 18px !important;
+    min-height: 0;
+    height: auto;
+    padding: 18px;
     border-radius: 12px;
   }
 
@@ -1166,15 +1166,4 @@ footer {
     margin: 0;
     overflow-wrap: anywhere;
   }
-}
-
-#page-tentang .about-photo,
-#page-tentang .about-emblem {
-  pointer-events: none !important;
-  cursor: default !important;
-}
-
-#page-tentang .about-photo:hover,
-#page-tentang .about-emblem:hover {
-  transform: none !important;
 }
