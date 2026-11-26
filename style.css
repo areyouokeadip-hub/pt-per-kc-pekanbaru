@@ -1,5 +1,4 @@
-
-* {
+- {
   box-sizing: border-box;
 }
 
@@ -512,9 +511,9 @@ body {
   height: auto;
 }
 
-/* BANNER HUBUNGI KAMI */
+/* BANNER PENGAJUAN PINJAMAN */
 .contact-photo {
-  height: 420px;
+  height: auto;
 }
 
 /* PETA LOKASI */
@@ -840,7 +839,7 @@ body {
   margin: 9px 0;
 }
 
-/* HUBUNGI KAMI */
+/* PENGAJUAN PINJAMAN */
 .contact-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1022,12 +1021,9 @@ footer {
   }
 
   .feature-photo,
-  .about-photo {
-    height: auto;
-  }
-
+  .about-photo,
   .contact-photo {
-    height: 280px;
+    height: auto;
   }
 
   .info-strip {
@@ -1041,67 +1037,66 @@ footer {
 }
 
 /* =========================================
-   FIX HALAMAN HUBUNGI PT PER - MOBILE
-   Override khusus layar HP tanpa mengubah desktop
+   FIX HALAMAN PENGAJUAN PINJAMAN - MOBILE
 ========================================= */
 @media (max-width: 760px) {
-  #page-kontak {
+  #page-pengajuan {
     padding-top: 18px;
     padding-bottom: 30px;
   }
 
-  #page-kontak .page-heading {
+  #page-pengajuan .page-heading {
     margin: 8px 0 22px;
   }
 
-  #page-kontak .page-heading h1 {
+  #page-pengajuan .page-heading h1 {
     font-size: 32px;
     line-height: 1.2;
     margin: 8px 0 14px;
   }
 
-  #page-kontak .page-heading p {
+  #page-pengajuan .page-heading p {
     font-size: 15px;
     line-height: 1.8;
     max-width: 100%;
   }
 
-  #page-kontak .page-heading .section-kicker {
+  #page-pengajuan .page-heading .section-kicker {
     color: #4b9bd1;
   }
 
-  /* Banner kontak: tinggi mengikuti gambar */
-  #page-kontak .contact-photo {
+  /* Banner pengajuan: tinggi mengikuti gambar penuh tanpa ruang kosong */
+  #page-pengajuan .contact-photo {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
     margin-bottom: 18px;
   }
 
-  #page-kontak .contact-photo img {
+  #page-pengajuan .contact-photo img {
     display: block;
-    width: 100%;
+    width: 100% !important;
     height: auto !important;
     max-height: none !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
   }
 
-  #page-kontak .contact-photo span {
+  #page-pengajuan .contact-photo span {
     left: 12px;
     bottom: 12px;
     font-size: 11px;
     padding: 10px 14px;
   }
 
-  /* Kartu telepon, email, dan kontak dibuat ringkas */
-  #page-kontak .contact-card {
+  /* Kartu kontak dibuat ringkas */
+  #page-pengajuan .contact-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 16px;
     margin-bottom: 20px;
   }
 
-  #page-kontak .contact-card > div {
+  #page-pengajuan .contact-card > div {
     width: 100%;
     min-height: 0 !important;
     height: auto !important;
@@ -1109,27 +1104,27 @@ footer {
     border-radius: 16px;
   }
 
-  #page-kontak .contact-card .quick-icon {
+  #page-pengajuan .contact-card .quick-icon {
     width: 60px;
     height: 60px;
     margin: 0 0 15px;
   }
 
-  #page-kontak .contact-card h3 {
+  #page-pengajuan .contact-card h3 {
     font-size: 23px;
     margin: 18px 0 12px;
   }
 
-  #page-kontak .contact-card p {
+  #page-pengajuan .contact-card p {
     font-size: 14px;
     line-height: 1.8;
     margin: 8px 0;
     overflow-wrap: anywhere;
   }
 
-  /* Hindari elemen halaman kontak melebar keluar layar */
-  #page-kontak,
-  #page-kontak * {
+  /* Hindari elemen halaman pengajuan melebar keluar layar */
+  #page-pengajuan,
+  #page-pengajuan * {
     max-width: 100%;
   }
 }
