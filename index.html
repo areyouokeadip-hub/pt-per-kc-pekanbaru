@@ -12,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- PENGATURAN UKURAN BERANDA -->
+  <!-- PENGATURAN UKURAN BERANDA & PERSYARATAN -->
   <style>
     /* BANNER BERANDA DESKTOP */
     #page-beranda .hero {
@@ -55,12 +55,69 @@
       z-index: 4;
     }
 
+    /* STYLING CARD PERSYARATAN PENGAJUAN PINJAMAN */
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .requirement-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .requirement-box h2 {
+      margin: 6px 0 10px;
+      font-size: 20px;
+      color: #0f172a;
+    }
+
+    .requirement-box > p {
+      color: #475569;
+      font-size: 14px;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .req-list {
+      padding-left: 20px;
+      margin: 0;
+      color: #1e293b;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .req-list > li {
+      margin-bottom: 8px;
+    }
+
+    .req-sublist {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+      color: #334155;
+    }
+
+    .req-sublist li {
+      margin-bottom: 6px;
+    }
+
     /* TABLET */
     @media (max-width: 1100px) {
       #page-beranda .hero {
         height: 700px !important;
         min-height: 700px !important;
         max-height: 700px !important;
+      }
+
+      .requirements-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -112,7 +169,7 @@
     <button class="nav-link" data-page="lokasi"><span>⌖</span>Lokasi</button>
     <button class="nav-link" data-page="simulasi"><span>▦</span>Simulasi Kredit</button>
     <button class="nav-link" data-page="tentang"><span>👥</span> Tentang Kami</button>
-    <button class="nav-link" data-page="kontak"><span>✉</span>Hubungi Kami</button>
+    <button class="nav-link" data-page="pengajuan"><span>📋</span>Pengajuan Pinjaman</button>
   </nav>
 
   <div class="sidebar-bottom">
@@ -233,8 +290,8 @@
       </div>
     </div>
 
-    <button class="text-button" data-goto="kontak">
-      Hubungi Kami →
+    <button class="text-button" data-goto="pengajuan">
+      Pengajuan Pinjaman →
     </button>
 
   </div>
@@ -591,14 +648,14 @@
 
 </section>
 
-<!-- HUBUNGI KAMI -->
-<section class="page" id="page-kontak">
+<!-- PENGAJUAN PINJAMAN -->
+<section class="page" id="page-pengajuan">
 
   <div class="page-heading">
-    <span class="section-kicker">TERHUBUNG DENGAN KAMI</span>
-    <h1>Hubungi PT PER</h1>
+    <span class="section-kicker">LAYANAN PEMBIAYAAN</span>
+    <h1>Pengajuan Pinjaman</h1>
     <p>
-      Silakan hubungi kantor PT PER untuk informasi produk dan layanan lebih lanjut.
+      Lengkapi persyaratan dokumen berikut untuk mengajukan pembiayaan di PT PER Kantor Cabang Pekanbaru.
     </p>
   </div>
 
@@ -608,22 +665,72 @@
          alt="Area pelayanan PT PER"
          onerror="this.style.display='none';this.parentElement.classList.add('photo-missing')">
 
-    <span class="contact-photo-badge">Pelayanan PT PER</span>
+    <span class="contact-photo-badge">Pelayanan Pengajuan PT PER</span>
 
   </div>
 
-  <div class="contact-card">
+  <!-- KETERANGAN PERSYARATAN PENGAJUAN -->
+  <div class="requirements-grid">
+
+    <!-- PERSYARATAN UMUM -->
+    <div class="requirement-box">
+      <span class="section-kicker">DOKUMEN WAJIB</span>
+      <h2>Persyaratan Umum</h2>
+      <p>
+        Mengisi formulir aplikasi dengan melampirkan persyaratan dokumen yang harus dipenuhi adalah sebagai berikut:
+      </p>
+      <ol class="req-list">
+        <li>Foto copy KTP Provinsi Riau calon Debitur dan istri/ suami/ orang tua/ wali (2 lembar).</li>
+        <li>Pas photo terbaru calon Debitur dan istri/ suami/ orang tua/ wali ukuran 3X4 cm (2 lembar).</li>
+        <li>Foto copy Kartu Keluarga (2 lembar).</li>
+        <li>Foto copy surat nikah/ cerai (bagi yg telah menikah/ cerai).</li>
+        <li>Foto copy dokumen agunan/ jaminan kredit (2 lembar).</li>
+        <li>Surat Keterangan dari Sekolah atau Perguruan Tinggi yang menerangkan bahwa yang akan dibiayai sedang atau akan mengikuti pendidikan di Sekolah atau Perguruan Tinggi tersebut.</li>
+        <li>Rincian Anggaran Biaya Pendidikan.</li>
+      </ol>
+    </div>
+
+    <!-- PERSYARATAN KHUSUS -->
+    <div class="requirement-box">
+      <span class="section-kicker">SESUAI PROFESI / USAHA</span>
+      <h2>Persyaratan Khusus</h2>
+      <p>
+        Melampirkan persyaratan khusus sebagai berikut:
+      </p>
+      <ol class="req-list">
+        <li>
+          <strong>Berpenghasilan tetap</strong>
+          <ul class="req-sublist">
+            <li>Foto copy Surat Keputusan (SK) pengangkatan terakhir atau Surat Keterangan Kerja dari tempat pemohon bekerja.</li>
+            <li>Foto copy Buku Tabungan 3 bulan terakhir.</li>
+            <li>Ampra gaji/ slip gaji asli bulan terakhir.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Berpenghasilan tidak tetap</strong>
+          <ul class="req-sublist">
+            <li>Usaha telah berjalan minimal selama 1 (satu) tahun.</li>
+            <li>Foto copy Surat Keterangan Usaha/ Surat Izin Usaha (SIUP, SITU, TDP dan HO) atau surat keterangan lainnya khusus untuk sektor pertanian yang masih berlaku.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- INFORMASI KONTAK & PENGAJUAN -->
+  <div class="contact-card" style="margin-top: 24px;">
 
     <div>
       <span class="quick-icon">☎</span>
-      <h3>Telepon</h3>
+      <h3>Konsultasi & Pengajuan WA</h3>
 
       <p>
-        <a href="https://api.whatsapp.com/send?phone=628117523938&text=Halo%20PT%20PER%20Kantor%20Cabang%20Pekanbaru,%20saya%20ingin%20bertanya%20mengenai%20layanan%20anda."
+        <a href="https://api.whatsapp.com/send?phone=628117523938&text=Halo%20PT%20PER%20Kantor%20Cabang%20Pekanbaru,%20saya%20ingin%20mengajukan%20pinjaman%20dan%20bertanya%20mengenai%20persyaratan%20kredit."
            target="_blank"
            rel="noopener noreferrer"
            style="color: inherit; text-decoration: none; display: inline-block; cursor: pointer;"
-           title="Chat langsung via WhatsApp">
+           title="Ajukan & Konsultasi via WhatsApp">
           +62 811-7523-938 ↗
         </a>
       </p>
@@ -631,13 +738,13 @@
 
     <div>
       <span class="quick-icon">✉</span>
-      <h3>Email</h3>
+      <h3>Email Layanan</h3>
       <p>kcpku.ptper@gmail.com</p>
     </div>
 
     <div>
       <span class="quick-icon">⌖</span>
-      <h3>Alamat</h3>
+      <h3>Kantor Pelayanan</h3>
 
       <p>
         <a href="https://maps.app.goo.gl/PMSXnhPdf3aQpNTTA"
@@ -652,11 +759,19 @@
 
   </div>
 
-  <div style="margin-top: 20px;">
+  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px;">
     <a class="green-button"
-       href="https://perriau.com/ptper/"
+       href="https://api.whatsapp.com/send?phone=628117523938&text=Halo%20PT%20PER%20Kantor%20Cabang%20Pekanbaru,%20saya%20ingin%20mengajukan%20pinjaman."
        target="_blank"
        rel="noopener noreferrer">
+      Ajukan Pinjaman via WhatsApp ↗
+    </a>
+
+    <a class="gold-button"
+       href="https://perriau.com/ptper/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="text-decoration: none; display: inline-flex; align-items: center;">
       Kunjungi Website Resmi PT PER ↗
     </a>
   </div>
