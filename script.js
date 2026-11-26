@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lokasi: "Lokasi",
     simulasi: "Simulasi Kredit",
     tentang: "Tentang Kami",
-    kontak: "Hubungi Kami"
+    pengajuan: "Pengajuan Pinjaman"
   };
 
   // NAVIGASI HALAMAN
@@ -149,66 +149,40 @@ document.addEventListener("DOMContentLoaded", () => {
 // FUNGSI PREVIEW UPLOAD GAMBAR INTERAKTIF
 // ==================================
 
-// 1. Banner Beranda
-function previewHero(event) {
+function handleImagePreview(event, targetId) {
+  const file = event.target && event.target.files && event.target.files[0];
+  if (!file) return;
+
   const reader = new FileReader();
-  reader.onload = function() {
-    const output = document.getElementById('heroImg');
+  reader.onload = function () {
+    const output = document.getElementById(targetId);
     if (output) {
       output.src = reader.result;
-      output.style.display = 'block';
+      output.style.display = "block";
       if (output.nextElementSibling) {
-        output.nextElementSibling.style.display = 'none';
+        output.nextElementSibling.style.display = "none";
       }
     }
   };
-  reader.readAsDataURL(event.target.files[0]);
+  reader.readAsDataURL(file);
+}
+
+// 1. Banner Beranda
+function previewHero(event) {
+  handleImagePreview(event, "heroImg");
 }
 
 // 2. Banner Lokasi
 function previewLokasi(event) {
-  const reader = new FileReader();
-  reader.onload = function() {
-    const output = document.getElementById('lokasiImg');
-    if (output) {
-      output.src = reader.result;
-      output.style.display = 'block';
-      if (output.nextElementSibling) {
-        output.nextElementSibling.style.display = 'none';
-      }
-    }
-  };
-  reader.readAsDataURL(event.target.files[0]);
+  handleImagePreview(event, "lokasiImg");
 }
 
 // 3. Emblem Bulat di Halaman Tentang Kami
 function previewEmblem(event) {
-  const reader = new FileReader();
-  reader.onload = function() {
-    const output = document.getElementById('emblemImg');
-    if (output) {
-      output.src = reader.result;
-      output.style.display = 'block';
-      if (output.nextElementSibling) {
-        output.nextElementSibling.style.display = 'none';
-      }
-    }
-  };
-  reader.readAsDataURL(event.target.files[0]);
+  handleImagePreview(event, "emblemImg");
 }
 
 // 4. Banner Atas di Halaman Tentang Kami
 function previewTentangBanner(event) {
-  const reader = new FileReader();
-  reader.onload = function() {
-    const output = document.getElementById('tentangBannerImg');
-    if (output) {
-      output.src = reader.result;
-      output.style.display = 'block';
-      if (output.nextElementSibling) {
-        output.nextElementSibling.style.display = 'none';
-      }
-    }
-  };
-  reader.readAsDataURL(event.target.files[0]);
+  handleImagePreview(event, "tentangBannerImg");
 }
