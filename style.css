@@ -354,6 +354,10 @@ body {
   width: 100%;
 }
 
+.quick-grid.quick-grid-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .quick-card {
   position: relative;
   text-align: left;
@@ -911,7 +915,8 @@ footer {
     min-height: 700px;
   }
 
-  .quick-grid {
+  .quick-grid,
+  .quick-grid.quick-grid-5 {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1013,6 +1018,7 @@ footer {
   }
 
   .quick-grid,
+  .quick-grid.quick-grid-5,
   .product-grid,
   .contact-card,
   .vision-grid,
